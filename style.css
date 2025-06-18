@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+   font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+
+}
+
+body{
+    background-image: url(WhatsApp\ Image\ 2025-06-12\ at\ 23.00.25_ad9ec499.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: max(1200px,100vw);
+    background-size: cover;
+    height: 100vh;
+    margin-top: 0px;
+    background-attachment:fixed ;
+    
+}
+
+nav{
+    box-sizing: border-box;
+    
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(205, 205, 205);
+    max-width: 80vw;
+    margin: auto;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-top: 80px;
+    box-shadow: 0px 0px 20px rgb(0, 60, 16);
+    }
+ul li a{
+    text-decoration: none;
+    color: rgb(0, 62, 45);
+    
+}
+ul li a:hover{
+    animation: grow 0.3s forwards;
+}
+@keyframes grow{
+    from{
+        color: rgb(1, 72, 21);
+    }
+    to{
+        color: rgb(118, 210, 115);
+        font-size: large;
+    }
+}
+@keyframes shrink{
+    from{
+        color:rgb(118, 210, 115) ;
+    }
+    to{
+       color: rgb(1, 72, 21); 
+    }
+}
+
+
+.head{
+    font-weight: bolder;
+    font-size: xx-large;
+    color: rgb(0, 35, 63);
+    margin-top: 150px;
+    margin-left: 50px;
+    z-index: 10;
+}
+
+.intro{
+    font-size: 20px;
+    font-weight: bold;
+    width: 40vw;
+    margin-left: 50px;
+    position: relative;
+    color: white;
+    z-index: 10;
+   
+}
+
+div.intro img{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: -35px;
+    margin-left: 40vw;
+    border-radius: 1000px;
+    box-shadow: 0px 0px 20px rgb(59, 157, 108);    
+}
+.intro img:hover{
+    animation: growbox 0.3s forwards;
+}
+h1 {
+   margin-left: 35vw;
+   margin-top: 7vw;
+    font-size: xx-large;
+    font-weight: 1000;
+    color: rgb(0, 52, 30);
+    opacity: 0.81;
+    
+}
+
+
+
+    
+
+.xlr8{
+    width: 80vw;
+    margin: auto;
+    height: 35vh;
+    background-color: rgb(172, 255, 56);
+    margin-top: 150px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    cursor: pointer;
+    animation: shrinkBack 0.3s forwards;
+}
+div.xlr8 img{
+    position: absolute;
+    width: 25vw;
+    height: 25vh;
+    border-radius: 10px;
+    top: 47px;
+    left: 45px;
+}
+.xlr8:hover{
+    animation: growbox 0.3s forwards;
+}
+
+
+.desc{
+    position: absolute;
+    width: 40vw;
+    left: 35vw;
+    margin: 20px 20px 20px 20px;
+    top :3vw;
+    font-weight: 500;
+    font-size: small;
+    color: rgb(155, 92, 92);
+}
+.aero{
+     width: 80vw;
+    margin: auto;
+    height: 35vh;
+    background-color: rgb(56, 192, 255);
+    margin-top: 150px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    cursor: pointer;
+    animation: shrinkBack 0.3s forwards;
+}
+div.aero img{
+     position: absolute;
+    width: 25vw;
+    height: 25vh;
+    border-radius: 10px;
+    top: 47px;
+    left: 45px;
+}
+.aero:hover{
+    animation: growbox 0.3s forwards;
+}
+.desc2{
+    position: absolute;
+    width: 40vw;
+    left: 35vw;
+    
+    top :5vw;
+    font-weight: 500;
+    font-size: small;
+    color: rgb(155, 92, 92);
+}
+.ms{
+     width: 80vw;
+    margin: auto;
+    height: 35vh;
+    background-color: rgb(242, 56, 255);
+    margin-top: 150px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    cursor: pointer;
+    animation: shrinkBack 0.3s forwards; 
+}
+
+div.ms img{
+     position: absolute;
+    width: 25vw;
+    height: 25vh;
+    border-radius: 10px;
+    top: 47px;
+    left: 45px;
+}
+.desc3{
+    position: absolute;
+    width: 40vw;
+    left: 35vw;
+    margin: 5px 20px 20px 20px;
+    top :3vw;
+    font-weight: 500;
+    font-size: small;
+    color: rgb(155, 92, 92);
+}
+.ms:hover{
+    animation: growbox 0.3s forwards;
+}
+@keyframes growbox{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+       
+    }
+}
+@keyframes shrinkBack {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+
+
+.gallery{
+    display: grid;
+    grid-template-columns: 30vw 30vw;
+    gap:10vw ;
+    margin-left: 14vw;
+    margin-top: 5vw; 
+}
+.item img{
+    width: 25vw;
+    height: 25vw;
+    border-radius: 12px;
+}
+.item video{
+    width: 25vw;
+    height: 25vw;
+    border-radius: 12px;
+    object-fit: fill; 
+}
+.item1:hover{
+    animation: growbox 0.3s forwards;
+}
+.item2:hover{
+    animation: growbox 0.3s forwards;
+}
+.item3:hover{
+    animation: growbox 0.3s forwards;
+}
+.item4:hover{
+    animation: growbox 0.3s forwards;
+}
+.item5:hover{
+    animation: growbox 0.3s forwards;
+}
+.item6:hover{
+    animation: growbox 0.3s forwards;
+}
+.item7:hover{
+    animation: growbox 0.3s forwards;
+}
+.item8:hover{
+    animation: growbox 0.3s forwards;
+}
+.contact{
+    width: 100vw;
+    height: 25vw;
+    background-color: rgb(14, 48, 0);
+}
+.name b{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+   font-family: "Baloo 2", sans-serif;
+    font-optical-sizing: auto;
+     font-weight: 500;
+  font-style: normal;
+    font-size: x-large;
+    padding: 15px;
+}
+
+.con{
+    display: grid;
+    grid-template-columns: 40vw 30vw;
+    gap: 20vw;
+    margin-left: 10vw;
+}
+.mail{
+    color: rgb(16, 247, 255);
+}
+.phone{
+     color:  rgb(16, 247, 255);
+}
+.mail b{
+    color: white;
+}
+.phone b{
+    color: white;
+}
+.social{
+    display: grid;
+    grid-template-columns: 20vw 20vw 18vw;
+    gap: 15vw;
+    margin-left: 10vw;
+    margin-top: 5vw;
+    color: rgb(21, 0, 0);
+    font-family: "Baloo 2", sans-serif;
+    font-optical-sizing: auto;
+     font-weight: 500;
+    font-style: normal;
+    font-size: larger;
+}
+.social a{ text-decoration: none;
+color: black;
+}
+.social a:hover{
+    animation: grow 0.3s forwards;
+}
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.link span{
+    padding-top: 7px;
+    padding-left: 2px;
+
+    
+}
+.insta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.insta span{
+    padding-top: 7px;
+    padding-left: 2px;
+}
+.git {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.git span{
+    padding-top: 7px;
+    padding-left: 2px;
+}

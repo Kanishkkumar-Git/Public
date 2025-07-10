@@ -1,25 +1,42 @@
-import  { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const WatchLater = () => {
-  const [ setVideos] = useState([]);
-
+function WatchLater() {
+  const [videos, setVideos] = useState([]);
+  const user = JSON.parse(localStorage.getItem('user'));
 
   useEffect(() => {
-    fetchWatchLater();
+    if (!user || !user.token) return;
+
+    axios.get('http://127.0.0.1:8000/api/watchlater/list/', {
+      headers: {
+        Authorization: `Token ${user.token}`
+      }
+    })
+      .then(res => setVideos(res.data))
+      .catch(err => console.error(err));
   }, []);
 
-  const fetchWatchLater = async () => {
-    try {
-      const response = await axios.get('/api/watchlater/', {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem('token')}`
-        }
-      });
-      setVideos(response.data);
-    } catch (error) {
-      console.error("Error fetching watch later videos:", error);
-    }
-  }
+  return (
+    <div style={{ padding: '20px', marginLeft: '200px' }}>
+      <h2>📂 Watch Later Videos</h2>
+      {videos.length === 0 ? (
+        <p>No videos in your Watch Later list.</p>
+      ) : (
+        videos.map(video => (
+          <div key={video.id} style={{ marginBottom: '20px' }}>
+            <h4>{video.title}</h4>
+            <video width="320" height="180" controls>
+              <source src={`http://127.0.0.1:8000${video.video}`} type="video/mp4" />
+            </video>
+            <p>{video.description}</p>
+          </div>
+        ))
+      )}
+    </div>
+  );
 }
+
 export default WatchLater;
+
+

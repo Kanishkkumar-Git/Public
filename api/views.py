@@ -79,3 +79,24 @@ def user_videos(request):
     videos = Video.objects.filter(user=request.user).order_by('-id')
     serializer = VideoSerializer(videos, many=True, context={'request': request})
     return Response(serializer.data)
+    
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def toggle_watch_later(request, video_id):
+    try:
+        video = Video.objects.get(pk=video_id)
+        user = request.user
+        if user in video.watch_later.all():
+            video.watch_later.remove(user)
+        else:
+            video.watch_later.add(user)
+        return Response({'message': 'Toggled Watch Later'})
+    except Video.DoesNotExist:
+        return Response({'error': 'Video not found'}, status=404)
+        
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def list_watch_later(request):
+    videos = Video.objects.filter(watch_later=request.user)
+    serializer = VideoSerializer(videos, many=True, context={'request': request})
+    return Response(serializer.data)

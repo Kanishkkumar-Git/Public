@@ -26,7 +26,7 @@ const Navbar = () => {
         <Link to="/" onClick={toggleSidebar}>🏠 Home</Link>
         <Link to="/dashboard" onClick={toggleSidebar}>📊 Dashboard</Link>
         <Link to="/upload" onClick={toggleSidebar}>⬆️ Upload</Link>
-        <Link to="/watch-later" onClick={toggleSidebar}>⏰ Watch Later</Link>
+        <Link to="/watch-later" className="btn btn-outline-light me-2" onClick={toggleSidebar} >⏰ Watch Later</Link>
         <Link to="/register" onClick={toggleSidebar}>📝 Register</Link>
         <Link to="/login" onClick={toggleSidebar}>🔐 Login</Link>
         <Link to="/logout" onClick={toggleSidebar}>🚪 Logout</Link>
